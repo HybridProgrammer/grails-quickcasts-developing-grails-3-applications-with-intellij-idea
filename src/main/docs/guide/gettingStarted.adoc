@@ -14,8 +14,15 @@ in IntelliJ IDEA. So this is   not going to be any sort of   comprehensive tutor
 what I want to do is   demonstrate some features and tips and   tricks that specifically relate to doing
   Grails development in the IDE
 
-So I   started by a cloning our sample music   application from from
-GitHub and now I   want to open that project in the IDE and   the opening of a Grails 3 project in IntelliJ IDE is
+So I   started by a cloning our https://github.com/grails-samples/music[*sample music*]   application from from
+GitHub.
+
+----
+git clone git@github.com:grails-samples/music.git
+----
+
+
+[...] And now I   want to open that project in the IDE and   the opening of a Grails 3 project in IntelliJ IDE is
   super simple so I&#39;ve just selected the   the Open button there and I&#39;m going to   navigate
 out to the folder that contains   our project that&#39;s the folder that we   just now created when
 I when I clones   that repository and I want to accept the   defaults here i want to create a   separate
