@@ -103,15 +103,17 @@ image::gradleBootRun.png[]
 gradle bootRun
 ----
 
-If i had several
+If I had several
 things   going on and want to create several   terminals i can do that right here and I can create as many terminal
 windows as you like. You can close   those two   so when you run the application from   Gradle the bytecode
 verification stuff   is all managed for you automatically   so they&#39;re the application up and
 running i&#39;ll send the request to the app   there&#39;s one two three and we see in the   updated
 search controller so we&#39;ll get   rid of the the word updated there and   we&#39;ll feed that once
-the once the system   recognizes that change and recompile the   glass now if I come out here and send
+the once the system   recognizes that change and recompile the   class now if I come out here and send
   some more requests to the app we see the   texts exchanged here so that&#39;s evidence   that the
-reloading agent really is   working when i run the application from   using the greatest rapper alright
+reloading agent really is   working when i run the application from   using the gradle wrapper.
+
+Alright
   another thing i might want to do from   the IDE is debug the application so   let&#39;s put a put
 a breakpoint right there   and we&#39;ll also go into the service and   we&#39;ll put a breakpoint right
 there   so I&#39;ve got a couple of breakpoints in   the in the project and a way to run the   application
@@ -119,19 +121,23 @@ again is with this run   configuration that was created earlier   if i could cli
   first I&#39;ll run the application and if i   click the green bug next to it that will   run the application
 in debug mode so   i&#39;ll click the bug and what&#39;s happening   right now the application is being
   started up very much like it would be if   I had just run the application but the   the debugging
-agent is being configured   and started up so when a request is sent   to this controller action we
+agent is being configured   and started up.
+
+image::debug.png[]
+
+So when a request is sent   to this controller action we
 should hit   this breakpoint and we can interrogate   the environment and find out what&#39;s   going
-on so we come back here and   refresh this page we just now hit this   breakpoint online 11 we can see
-that   search terms know so that condition is   going to be false when i click continue   here the application
+on so we come back here and   refresh this page we just now hit this   breakpoint on line 11 we can see
+that   search terms know so that condition is   going to be false when I click continue   here the application
 just carries on and   now this page finished loading so if I   were to execute a search here will
 search for Riverside we just hit that   break point we can   interrogate this search term we see the
   search term in riverside this is what   I&#39;ve typed in the search field in the   browser so we&#39;ll
 continue on and this   time what&#39;s going to happen since there   is the search term we&#39;re going
 to this   line of code will get executed that&#39;s   going to call the search method on our   search
 service and we&#39;ve got a break   point in that method there we go we just   hit it and for the were
-just into   standard step be bugging capabilities   that the ID has so I can step over these   one line
-at a time I can step into   methods i can step out of methods that   bugging the debugging works just
-like it   would in any standard Java groovy   application will go ahead and continue   and we should
+just into   standard step debugging capabilities   that the IDE has so I can step over these   one line
+at a time I can step into   methods I can step out of methods that   bugging the debugging works just
+like it   would in any standard Java/Groovy   application will go ahead and continue   and we should
 have our results in the   browser there we go we do and maybe   we&#39;re going to search for something
 else   search for tool and we hit our break   point in the controller again right we   should search
 service tool I&#39;ll click   continue   now we&#39;re in the search service and i   can see the search
