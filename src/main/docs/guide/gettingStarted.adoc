@@ -38,6 +38,8 @@ I want to accept the   defaults here
 * *Create separate module per source set*
 * *Use the default gradle wrapper (recommended)*
 
+image::intellij-gradle-config.png[]
+
 as
 the IDE   says this is recommended and notice that   I don&#39;t have a gradle home set   I don&#39;t even
 have to have gradle   installed ahead of time for this to work   the the ide will recognize or will
@@ -46,8 +48,8 @@ you want   so there we go let&#39;s resize this window   so everyting fits nicel
 go right so the project is open in   the IDE you look under the grails folder you&#39;ll see several
 folders are   configured as source folders we&#39;ve got   controllers, init and services this   particular
 project doesn&#39;t have any   domain classes   or taglibs if it did the IDE would   recognize those
-and configure the appropriate source folders.   there is also under src >> main >> groovy
-we&#39;ve got some source out here and same   with under src >> test so the IDE and   Gradle conspired
+and configure the appropriate source folders.   there is also under *src/main/groovy*
+we&#39;ve got some source out here and same   with under *src/test* so the IDE and   Gradle conspired
 thereto to figure out   where all the source directories were   and almost always what would configure
   story is what you&#39;re going to want with   respect to that
 
@@ -56,38 +58,54 @@ we want to run the   application so every easy Grails 3 application   has this a
  in grails-app/init/<app-name>/Application.groovy, in
 it and   this is what it looks like by default.
 
-image:ApplicationMain.png[]
+image::ApplicationMain.png[]
 
 In   this project we haven&#39;t made any changes to this   class
 so that the class always have this   main method in it and we can run one of   the ways and i&#39;ll
-demonstrate a few ways   to run the application but one of the   ways to run a girl three application
-  from the ide simply execute this main   method and when you do that the the ID   just now created
+demonstrate a few ways   to run the application but one of the   ways to run a Grails 3 application
+  from the IDE is to simply execute this main   method and when you do that the the IDE   just now created
 this run configuration   in the first time I open a project in   the IDE what I&#39;m going to do most
   options is run the application and then   edit the configuration that was created   and I almost always
-am going to want to   do that and so that&#39;s minus no verified   as a vm option and what that does
+am going to want to   do that and so that&#39;s *-noverify*   as a vm option and what that does
 is   that tongues off the bike code verifier   and the reason i want to turn off the   bytecode verifier
 is turning the   bytecode verifier off allows the   reloading agent in grills to work so let   me make
-bail and make a simple code   change here   we&#39;ve got some code there and I&#39;m gonna   start
-the application again so the first   time I started the application i did   that so the idea would create
-that run   configuration and then I edited the   configuration to have to know verify in   it and I
-stopped the app because i   wanted to start a second time with with   the no verify in place so the
-  application is starting up right now and   there we go alright go here and we   should keep him out
-of here that says in   the search controller and if is and some   i refresh this page a few times we
+bail and make a simple code   change here   we&#39;ve got some code there.
+
+image::turnoffbytecodeverify.png[]
+
+I&#39;m gonna   start
+the application again so the first   time I started the application I did   that so the IDE would create
+that run   configuration and then I edited the   configuration to have -noverify in   it and I
+stopped the app because I   wanted to start a second time with with   the -noverify in place so the
+  application is starting up right now and   there we go.
+
+Alright go here and we   should keep him out
+of here that says in   the search controller and if is and some   I refresh this page a few times we
 see   in the surface controller several times   and I&#39;ll change this to say in the   updated search
 controller and so the   system will recognize that have made a   code change the controller will be
   recompiled and the reloading agent in   the framework will recognize that change   and reload it and
 when I come back here   and send some requests to the to the   application i just press refresh three
   or four times now we see in the updated   search controller so an important piece   there is you have
 to turn off the   bytecode verifier in order for reloading   to work and that&#39;s what the what the-
-  mill verified is for their i&#39;ll stop the   app another way to run the application   is with the
-Gradle boot run calf and   that can be done from the command line   and one of what I&#39;m doing grills
-  development in the IDE i will almost   always I will almost always use the   terminal that the built-in
+  mill verified is for their i&#39;ll stop the   app
+
+Another way to run the application   is with the
+gradle bootRun command and   that can be done from the command line   and one of what I&#39;m doing grills
+  development in the IDE I will almost   always I will almost always use the   terminal that the built-in
 terminal   support that is that is here as opposed   to command tabbing out to to a real   shell in
-my environment i almost always   want to i want to take advantage of this   terminal just because it&#39;s
+my environment I almost always   want to I want to take advantage of this   terminal just because it&#39;s
 more   convenient it&#39;s right here in the IDE   and so when I want to execute Gradle   tasks as an
-example I&#39;ll generally do   that right here in the terminal between   the ide and if i had several
-things   going on and want to create several   terminals i can do that right do created   is as many
-as you like you I think close   those two   so when you run the application from   Gradle the bytecode
+example I&#39;ll generally do   that right here in the terminal in the IDE.
+
+image::gradleBootRun.png[]
+
+----
+gradle bootRun
+----
+
+If i had several
+things   going on and want to create several   terminals i can do that right here and I can create as many terminal
+windows as you like. You can close   those two   so when you run the application from   Gradle the bytecode
 verification stuff   is all managed for you automatically   so they&#39;re the application up and
 running i&#39;ll send the request to the app   there&#39;s one two three and we see in the   updated
 search controller so we&#39;ll get   rid of the the word updated there and   we&#39;ll feed that once
