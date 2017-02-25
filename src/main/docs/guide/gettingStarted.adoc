@@ -1,1 +1,218 @@
 video::XsCCsTRdezw[youtube, width=640, height=360]
+
+=== Transcription
+
+Welcome to the OCI Grails Quickcast   bite-sized portions of Grails   productivity tips
+to help maximize   developer productivity with the   framework grails quickcast are brought   to you
+by OCI the home of the core   grails development team and your source   for professional support project
+work   and training around the Grails framework   grails quick casts are distributed in   partnership
+with these DZone who helped   build knowledge and relationships to   maximize your success
+
+Alright
+in this episode   what I want to do is I want to talk a   little bit about doing Grails 3   development
+in IntelliJ IDEA. So this is   not going to be any sort of   comprehensive tutorial on how to use   IntelliJ
+what I want to do is   demonstrate some features and tips and   tricks that specifically relate to doing
+  Grails development in the IDE
+
+So I   started by a cloning our sample music   application from from
+GitHub and now I   want to open that project in the IDE and   the opening of a Grails 3 project in IntelliJ IDE is
+  super simple so I&#39;ve just selected the   the Open button there and I&#39;m going to   navigate
+out to the folder that contains   our project that&#39;s the folder that we   just now created when
+I when I clones   that repository and I want to accept the   defaults here i want to create a   separate
+module purse or set and in   particular I want to use the default   Gradle rapper there and acids as
+the ID   says this is recommended and notice but   I don&#39;t have a great home set   I don&#39;t even
+have to have greater   installed ahead of time for this to work   the the ide will recognize or we&#39;ll
+use   the the Gradle rapper that is configured   in the project and that&#39;s almost always   what
+you want   so there we go let&#39;s resize this window   serving fourth nicely in the video of   every
+go right so the project is open in   the IDE you look under the grill that   folder you&#39;ll see several
+folders are   configured as source folders we&#39;ve got   controllers and it and services this   particular
+project doesn&#39;t have any   domain classes   or tagged in if it did the idea would   recognize those
+and configure the the   would be appropriate source folders   there also under source mean groovy
+we&#39;ve got some source out here and same   with under source test so the ide and   Gradle conspired
+thereto to figure out   where all the source directories were   and almost always what would configure
+  story is what you&#39;re going to want with   respect to that so one of the one of the   first things
+we want to do is run the   application so every girls 3 application   has this application class in
+it and   this is what it looks like by default in   this project we have any changes to this   class
+so that the class always have this   main method in it and we can run one of   the ways and i&#39;ll
+demonstrate a few ways   to run the application but one of the   ways to run a girl three application
+  from the ide simply execute this main   method and when you do that the the ID   just now created
+this run configuration   in the first time I open a project in   the IDE what I&#39;m going to do most
+  options is run the application and then   edit the configuration that was created   and I almost always
+am going to want to   do that and so that&#39;s minus no verified   as a vm option and what that does
+is   that tongues off the bike code verifier   and the reason i want to turn off the   bytecode verifier
+is turning the   bytecode verifier off allows the   reloading agent in grills to work so let   me make
+bail and make a simple code   change here   we&#39;ve got some code there and I&#39;m gonna   start
+the application again so the first   time I started the application i did   that so the idea would create
+that run   configuration and then I edited the   configuration to have to know verify in   it and I
+stopped the app because i   wanted to start a second time with with   the no verify in place so the
+  application is starting up right now and   there we go alright go here and we   should keep him out
+of here that says in   the search controller and if is and some   i refresh this page a few times we
+see   in the surface controller several times   and I&#39;ll change this to say in the   updated search
+controller and so the   system will recognize that have made a   code change the controller will be
+  recompiled and the reloading agent in   the framework will recognize that change   and reload it and
+when I come back here   and send some requests to the to the   application i just press refresh three
+  or four times now we see in the updated   search controller so an important piece   there is you have
+to turn off the   bytecode verifier in order for reloading   to work and that&#39;s what the what the-
+  mill verified is for their i&#39;ll stop the   app another way to run the application   is with the
+Gradle boot run calf and   that can be done from the command line   and one of what I&#39;m doing grills
+  development in the IDE i will almost   always I will almost always use the   terminal that the built-in
+terminal   support that is that is here as opposed   to command tabbing out to to a real   shell in
+my environment i almost always   want to i want to take advantage of this   terminal just because it&#39;s
+more   convenient it&#39;s right here in the IDE   and so when I want to execute Gradle   tasks as an
+example I&#39;ll generally do   that right here in the terminal between   the ide and if i had several
+things   going on and want to create several   terminals i can do that right do created   is as many
+as you like you I think close   those two   so when you run the application from   Gradle the bytecode
+verification stuff   is all managed for you automatically   so they&#39;re the application up and
+running i&#39;ll send the request to the app   there&#39;s one two three and we see in the   updated
+search controller so we&#39;ll get   rid of the the word updated there and   we&#39;ll feed that once
+the once the system   recognizes that change and recompile the   glass now if I come out here and send
+  some more requests to the app we see the   texts exchanged here so that&#39;s evidence   that the
+reloading agent really is   working when i run the application from   using the greatest rapper alright
+  another thing i might want to do from   the IDE is debug the application so   let&#39;s put a put
+a breakpoint right there   and we&#39;ll also go into the service and   we&#39;ll put a breakpoint right
+there   so I&#39;ve got a couple of breakpoints in   the in the project and a way to run the   application
+again is with this run   configuration that was created earlier   if i could click this green arrow
+  first I&#39;ll run the application and if i   click the green bug next to it that will   run the application
+in debug mode so   i&#39;ll click the bug and what&#39;s happening   right now the application is being
+  started up very much like it would be if   I had just run the application but the   the debugging
+agent is being configured   and started up so when a request is sent   to this controller action we
+should hit   this breakpoint and we can interrogate   the environment and find out what&#39;s   going
+on so we come back here and   refresh this page we just now hit this   breakpoint online 11 we can see
+that   search terms know so that condition is   going to be false when i click continue   here the application
+just carries on and   now this page finished loading so if I   were to execute a search here will
+search for Riverside we just hit that   break point we can   interrogate this search term we see the
+  search term in riverside this is what   I&#39;ve typed in the search field in the   browser so we&#39;ll
+continue on and this   time what&#39;s going to happen since there   is the search term we&#39;re going
+to this   line of code will get executed that&#39;s   going to call the search method on our   search
+service and we&#39;ve got a break   point in that method there we go we just   hit it and for the were
+just into   standard step be bugging capabilities   that the ID has so I can step over these   one line
+at a time I can step into   methods i can step out of methods that   bugging the debugging works just
+like it   would in any standard Java groovy   application will go ahead and continue   and we should
+have our results in the   browser there we go we do and maybe   we&#39;re going to search for something
+else   search for tool and we hit our break   point in the controller again right we   should search
+service tool I&#39;ll click   continue   now we&#39;re in the search service and i   can see the search
+terms tool and will   continue and I see some results back   here i&#39;m going to go back and search
+for   riverside again and we hit the   breakpoint in the controller but notice   when I could continue
+we&#39;re not going to   hit the breakpoint in the service this   time   there we go we&#39;ll come
+back here and we   see the results there and the reason we   didn&#39;t hit the breakpoint in the in
+the   service that time is the service is   marked with at cacheable so the first   time this method
+was called with   Riverside the code inside this method   had to be executed and a request was   sent
+off to the itunes store to find all   the albums that match the word riverside   and the results of
+that were   automatically cached because of this   annotation so the next time I executed   that search
+the caching mechanism and   the framework recognized that we already   searched for riverside so this
+code   doesn&#39;t have to execute again instead   the results are just retrieved from the   cash so
+the idea is where of all of that   and all that work as you would expect so   the way that I ran the
+application just   then in debug mode is I click this   hug while the while the application   drunken
+figure is selected and that   starts at the application in debug mode   it might be the case that you
+want to   launch the application from Gradle for   some reason and you want to debug the   application
+and a way to do that is so   so if i if i run the boot run fast that   will just run the application
+but i want   to i want to debug the application so   i&#39;m passing as a command line argument   there
+minus minus debug flash jbm and   we&#39;ll see the effect of that is that   greater will recognize
+that i put minus   minus debug jbm there and when it gets   to the point where it&#39;s starting up
+the   application and it just got there   notice it says listening for transport   dt socket address
+5005 the jvm is really   in in pause mode right now the debug   agent has been initialized in the jvm
+  and the debugging agent is waiting for   me to connect a remote debugger to the   process and then
+it will continue on   so a way to do that in the IDE is you   want to edit your configurations and you
+  want to create a new configuration and   let you do that is with this plus sign   up here and we wanted
+they&#39;re a bunch of   templates here for creating different   kinds of configs and we want to create
+a   remote config and i will usually do is   call it our BB for remote debug you call   it anything
+you like and click OK   typically i want all these defaults here   so i&#39;ll click ok and now i can
+run that   rdb can take in debug mode and what that   will do is connect the ids remote   debugger to
+the debugging agent for the   process that we just started in Gradle   and i happen to have started
+this in the   terminal right here in idea but I   executed the same command great little   boot room
+debug GBM just from out in a   shell completely separate from the ide   all of this would work exactly
+as it   does here so the fact that this shell   happens to be in the IDE it really   doesn&#39;t affect
+me this behavior so i   click the the bugbear while the rdb   config was was selected   and so the application
+should continue   starting up and the debug agent should   connect to to that process and then we
+interact with the application it should   be a very much like it did just a minute   ago   so let&#39;s
+see what this looks like we&#39;ll   go over here this is left over from the   last time that I ran
+the Randy   application will start over the radio we   hit the the index action search term is   null
+will continue on here we go this is   a restart of the application so the the   cash is going to be
+empty   we see the search terms riverside there   we go with step debug through all that   you see some
+results   same thing here that the index action   will get the service we see some results   and we&#39;ll
+go back in the circle   riverside again and we hit the index   action and will not hit the search
+service because of the caching stuff   right so i can debug the application   either by running the
+application run   config in debug mode or i can debug the   application by running running the app
+ with Gradle using a command like this   right Gradle w butron minus minus debug   jbm and when you
+do that as the   application starts up you&#39;ll get to a   point where the debugging agent causes
+  the jvm to pause and wait for for you to   connect connect a remote debugger and a   way to do that
+is to create their remote   config as I did and   click this bug and that will not allow   that can
+the process to continue   alright another thing you might want to   do is run tests from the ID so we&#39;ve
+got   we&#39;ve got a search controller stuck here   and can run this test just like you   would normally
+run a running unit test   from the ID i can right click here and   select Ron and they&#39;re two different
+run   config here one has the grills logo and   one has here I get that the junior at   local and i&#39;ll
+select the one that has   the j unit logo and what that will do is   that will run the test and you
+would   expect there we go all the tests passed   but there&#39;s a problem with the ladies   these
+tests are being run and that is   that the tests are actually being run in   production mode and that
+this particular   application doesn&#39;t have a database or   any environment specific stuff in it
+but   most of most girls applications due and   when you run your cast   generally you want the application
+  running in in test mode so to   demonstrate this issue what I&#39;ll do is   do something like this
+  alright so just add an assertion hear   that asserts that the applications that   the current environment
+really is   environment that test so that this is   simulating that there&#39;s some behavior in   the
+application that is contingent on   that behaves differently in the test   environment versus any other
+  environments are running tests again you   know i just press the keyboard shortcut   to rerun the
+test i could click this   green arrow up here and i expect the   test to fail because environment that
+  current is actually going to be   production and not test   there we go the tested fail and we see
+  environment that current really is   production so way to deal with that is i   can edit so the run
+configuration here   and specify minus grills DMV equals test   alright Grail study and v is the name
+of   the system property that can be set to   indicate which environment you want to   run in and now
+when i when i run the   test its it&#39;s going to it&#39;s going to   pass and what I just didn&#39;t
+work but   it&#39;s really not ideal and i&#39;ll get to   that I just want to see the test pass   first
+  there we go the test passed it really is   running in test mode but the problem   with that is in
+a real project you might   have lots and lots of of test   configurations not just one or two and
+you don&#39;t want to have to be this edit   all the run configurations to include   that so i&#39;m
+going to delete that room   config and what I&#39;m going to do is look   under these defaults so under
+default   are a bunch of templates that the ID   will use to create run configurations   for tests and
+remote debugger and   running application so forth   what I want to do is find the g-unit   template
+and put minus D grails DMV   equals cast and all that another thing   here on demo that name equals
+food   alright I will see what I want that   there in a minute   so this this run confirmed this is
+a   really run configuration this is a   template some of these defaults a   template that will be used
+anytime a   genius run config a junior run   configuration is created in this project   so now every
+time I open a new test and   run it it will pick up those those   settings let&#39;s demonstrate that
+so i   deleted the the run can pick for this   task so when i run the test again the   run config world
+it was just now created   and while the test is running if we go   look at this will see that all those
+  settings but I put in the template   really did get inherited into this test   specs so you&#39;ll
+want to edit this this   is j unit template down here just once   and from that point forward all of
+the   that when you run Julian and testing   pick up those settings   one thing to watch out for is
+let&#39;s get   eliminate that and i&#39;m going to undo the   change that we just need down here to
+  get rid of this go run configuration is   gone and i&#39;m going to run this test   again right and
+the test is going to   fail because it&#39;s going to run in   production mode when I really wanted
+to   run in test mode so i undid the change   in the the wrong template   there we go to test field
+so some folks   are know about this the the issues that   i&#39;m discussing here and and sometimes
+  you&#39;ll forget about the first time you   open a project in the IDE so then   they&#39;ll remember
+okay i need to come out   here and edit this this thing here and   put minus D girls that he and B equals
+  cast and then go about their business   this one is still broken right if i run   this test again
+the change but i just   made does not affect any existing run   configurations so if you&#39;ve run
+some   tests and then realized i need to do the   thing with grills study and be you&#39;ll   either
+need to iterate through all the   run config that have already been   created and edit them or what
+I find a   simpler as i&#39;ll just delete the run   config and then the next time I run that   test
+the run config will be recreated   and it will pick up the the changes that   i just made in the template
+so i expect   the test to pass this time   and that&#39;s it so hopefully there were a   couple of tips
+along the way there   that&#39;s found helpful just some basic   stuff about the most simple way to
+open   a Grail three project in the IDE and   some tips about running the application   running application
+debug mode and   dealing with test you know a lot of this   it relates to a couple of significant
+changes that we made in in grails 3   these are differences between grills   three and girls tube and
+one of them   seems pretty benign right that it   doesn&#39;t seem very interesting that you   can run
+an application runner girl three   application by executing the main method   it doesn&#39;t seem terribly
+compelling but   in previous versions of grills the prior   to grow 322 chronograph application you
+  had to interact with the build system   that was part of Grails so that in order   for the ID to run
+a grails app it really   had to know about the Grails build   system in grills three we got rid of the
+  build system that used to exist in   grails and replaced it with with Gradle   so that means the ide
+can load the   project up and know about sore shoulders   and and can do a whole lot of things   without
+knowing anything at all about   grails right it&#39;s getting all the path   information and project
+structure from   Gradle and all of the major IDs know   about know about cradle and have great   great
+support in addition to that having   this main method means that any ID that   knows about how to run
+a main method in   a groove your java class and knows about   Gradle any of those ids can now run and
+  debug a graph application which is which   is great thank you for watching this   episode of the oci
+grails quick cap for   more information on how OC I can help   you with grails or any of these other
+  practice areas is it oci web.com or   contact us at info at LCI web.com follow   our twitter accounts
+at object computing   and at grails framework also read   regular updates on the oci grails team   blog
+at grails blog dossier   web.com   [Music]
+
+
+
+=== What's Covered?
+:toc:
+
+==== Opening a Project in IntelliJ IDEA
+
