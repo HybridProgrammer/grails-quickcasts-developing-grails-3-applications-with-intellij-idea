@@ -23,23 +23,42 @@ git clone git@github.com:grails-samples/music.git
 
 
 [...] And now I   want to open that project in the IDE and   the opening of a Grails 3 project in IntelliJ IDE is
-  super simple so I&#39;ve just selected the   the Open button there and I&#39;m going to   navigate
+  super simple so I&#39;ve just selected the   the Open button there.
+
+image::intellij-open.png[]
+
+I&#39;m going to   navigate
 out to the folder that contains   our project that&#39;s the folder that we   just now created when
-I when I clones   that repository and I want to accept the   defaults here i want to create a   separate
-module purse or set and in   particular I want to use the default   Gradle rapper there and acids as
-the ID   says this is recommended and notice but   I don&#39;t have a great home set   I don&#39;t even
-have to have greater   installed ahead of time for this to work   the the ide will recognize or we&#39;ll
-use   the the Gradle rapper that is configured   in the project and that&#39;s almost always   what
-you want   so there we go let&#39;s resize this window   serving fourth nicely in the video of   every
-go right so the project is open in   the IDE you look under the grill that   folder you&#39;ll see several
-folders are   configured as source folders we&#39;ve got   controllers and it and services this   particular
-project doesn&#39;t have any   domain classes   or tagged in if it did the idea would   recognize those
-and configure the the   would be appropriate source folders   there also under source mean groovy
-we&#39;ve got some source out here and same   with under source test so the ide and   Gradle conspired
+I cloned   that repository.
+
+image::intellij-open-menu.png[]
+
+I want to accept the   defaults here
+
+* *Create separate module per source set*
+* *Use the default gradle wrapper (recommended)*
+
+as
+the IDE   says this is recommended and notice that   I don&#39;t have a gradle home set   I don&#39;t even
+have to have gradle   installed ahead of time for this to work   the the ide will recognize or will
+use   the the Gradle wrapper that is configured   in the project and that&#39;s almost always   what
+you want   so there we go let&#39;s resize this window   so everyting fits nicely in the video, there we go,
+go right so the project is open in   the IDE you look under the grails folder you&#39;ll see several
+folders are   configured as source folders we&#39;ve got   controllers, init and services this   particular
+project doesn&#39;t have any   domain classes   or taglibs if it did the IDE would   recognize those
+and configure the appropriate source folders.   there is also under src >> main >> groovy
+we&#39;ve got some source out here and same   with under src >> test so the IDE and   Gradle conspired
 thereto to figure out   where all the source directories were   and almost always what would configure
-  story is what you&#39;re going to want with   respect to that so one of the one of the   first things
-we want to do is run the   application so every girls 3 application   has this application class in
-it and   this is what it looks like by default in   this project we have any changes to this   class
+  story is what you&#39;re going to want with   respect to that
+
+So one of the one of the   first things
+we want to run the   application so every easy Grails 3 application   has this application class, located
+ in grails-app/init/<app-name>/Application.groovy, in
+it and   this is what it looks like by default.
+
+image:ApplicationMain.png[]
+
+In   this project we haven&#39;t made any changes to this   class
 so that the class always have this   main method in it and we can run one of   the ways and i&#39;ll
 demonstrate a few ways   to run the application but one of the   ways to run a girl three application
   from the ide simply execute this main   method and when you do that the the ID   just now created
